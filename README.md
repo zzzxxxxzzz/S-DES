@@ -7,7 +7,9 @@
 我们对该项目进行了拓展，实现了以ASCII码为明文输入和密文输出的功能。下面是加密演示：
 
 明文：wasd
+
 密钥：1010101011
+
 密文：IÄèÆ
 
 ![3-1](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/3-1.png)
