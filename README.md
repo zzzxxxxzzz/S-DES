@@ -85,13 +85,19 @@
 #### （2） 选择加密或解密操作
 
 加密界面：
+
 ![u-2](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-2.png)
 解密界面：
+
 ![u-3](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-3.png)
 
 #### （3）选择使用二进制（8-bit）模式或ASCII模式以进行加密或解密操作
+
 ![u-4](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-4.png)
+
 #### （4）输入需要加密（解密）的明文（密文）及其密钥（密钥输入时默认隐藏，如需要显示可点击右侧的“显示密钥”），如果格式错误会有相应的提示
+
 ![u-5](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-5.png)
 #### （5）得到加密（解密）之后的密文（明文）结果
+
 ![u-6](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-6.png)
