@@ -87,6 +87,10 @@
 加密界面：
 
 ![u-2](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-2.png)
+
+
+
+
 解密界面：
 
 ![u-3](https://github.com/zzzxxxxzzz/S-DES/blob/main/u-3.png)
