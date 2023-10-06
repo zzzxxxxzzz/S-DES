@@ -2,7 +2,95 @@
 ## 一 、作业任务
 
 ### 第一关：基本测试
+
+**GUI用户交互界面首页**：用户选择加密或解密操作。
+
+![1-1](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1-1.png)
+
+**加密界面**：用户输入需要加密的明文（需要在二进制8-bit模式和ASCII模式中进行选择）以及相关的密钥，得到加密后的密文
+
+**二进制（8-bit）模式**：
+如图，当输入明文为10011100，密钥为1111100000时，得到加密后的密文为11011011。
+
+![1-2](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1%20-2.png)
+
+如果输入的内容不规范（非二进制8bit明文，非二进制10bit密钥），会进行相应的错误提示。
+
+
+![1-3](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1-3.png)
+
+
+![1-4](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1-4.png)
+
+
+**解密界面**：用户输入需要解密的密文（同样需要在二进制8-bit模式和ASCII模式中进行选择）以及相关的密钥，得到解密后的明文。
+
+**二进制（8-bit）模式：**
+
+如图，当输入密文为11011011，密钥为1111100000时，得到解密后的明文与上述加密前的明文一致，为10011100
+
+![1-5](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1-5.png)
+
+同样，如果输入的内容不规范（非二进制8bit密文，非二进制10bit密钥），也会进行相应的错误提示。
+
+
+![1-6](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1-6.png)
+
+
+
+![1-7](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/1-7.png)
+
+
 ### 第二关：交叉测试
+
+参考其他同学小组中的测试内容，可以验证我们的加密以及解密过程可以得到与其他小组同样的结果。
+（参考小组的github链接：[https://github.com/KemingWu/SDES-CQU](https://github.com/KemingWu/SDES-CQU)；[https://github.com/cheney888-cyn/S-DES_2023](https://github.com/cheney888-cyn/S-DES_2023)）
+
+**二进制（8-bit）模式下加密**：
+
+明文：11001100
+
+密钥：0101011010
+
+密文：00010000
+
+![2-1](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/2-1.png)
+
+
+**二进制（8-bit）模式下解密**：
+
+密文：00010000
+
+密钥：0101011010
+
+明文：11001100
+
+![2-2](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/2-2.png)
+
+
+**ASCII模式下加密**：
+
+明文: Happy
+
+密钥: 0110110100
+
+密文: ªýOOÜ
+
+![2-3](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/2-3.png)
+
+
+**ASCII模式下解密:**
+
+密文: ªýOOÜ
+
+密钥: 0110110100
+
+明文: Happy
+
+![2-4](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/2-4.png)
+
+
+
 ### 第三关：扩展功能
 
 我们对该项目进行了拓展，实现了以ASCII码为明文输入和密文输出的功能。下面是加密演示：
