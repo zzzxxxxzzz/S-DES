@@ -193,3 +193,40 @@
 #### （5）得到加密（解密）之后的密文（明文）结果
 
 ![u-6](https://github.com/zzzxxxxzzz/S-DES/blob/main/image/u-6.png)
+
+#  
+##  三、开发者手册
+
+### 1、系统结构 
+S-DES（Simplified Data Encryption Standard）是一种简化版的数据加密标准算法，用于保护数据的机密性。
+
+它使用8位密钥，对8位输入数据进行置换、替代和混淆操作，生成8位的加密结果。
+
+根据S-DES算法的执行步骤，我们的S-DES系统结构如下：
+
+#### 1.GUI用户界面（提供用户进行加解密交互操作的界面）
+
+#### 2.基础加密（解密）操作：
+
+（1）密钥生成：根据用户提供的10bits大小的密钥生成两个8bits的子密钥
+
+（2）数据加密：依照S-DES算法的加密基本流程进行加密操作：初始置换（Initial Permutation）——轮函数（Round Function）（执行两次，第二次需要先交换左右部分并使用子密钥 K2）——逆初始分组（Inverse Initial Permutation）
+
+（3）数据解密：依照S-DES算法的解密基本流程进行解密操作，解密流程与加密流程类似，相当于加密流程的逆操作（轮函数中需要第一次使用子密钥K2，第二次使用子密钥K1）。
+
+### 2、关键代码组件
+#### 1、SDES类（用于进行基础8bits明密文加解密功能的类）
+
+（1） 需要用到的置换盒
+``` java
+// 定义S-DES算法所需要的置换表
+
+private  static  final  int[] P10 = {3, 5, 2, 7, 4, 10, 1, 9, 8, 6};
+
+private  static  final  int[] P8 = {6, 3, 7, 4, 8, 5, 10, 9};
+
+private  static  final  int[] IP = {2, 6, 3, 1, 4, 8, 5, 7};
+private  static  final  int[] IPInverse = {4, 1, 3, 5, 7, 2, 8, 6};
+private  static  final  int[] EP = {4, 1, 2, 3, 2, 3, 4, 1};
+private  static  final  int[] P4 = {2, 4, 3, 1};
+
